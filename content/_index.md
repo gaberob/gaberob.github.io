@@ -1,27 +1,30 @@
 ---
-title: "Homepage Title"
+title: "About Me"
 date: 2022-10-08
 draft: false 
-description: "Graham Helton"
+description: "Gabe Roberts"
 ---
 
 
-Brief "about you" section.
 
 # Education
-- Bachelors of Science in Cybersecurity (current)
+- Bachelors in Information Technology and Supply Chain Managment, Concentration in Cybersecurity
 
 
 # Job Experience
-- Intern @ xyz company 
+- Web App Security Specialist @ V.F. Corp
+- Phishing and Social Engineering Analyst @ V.F. Corp
+- Phishing and Social Engineering Intern @ V.F. Corp
+- Computer Science T.A.
+- Infosec Intern @ V.F. Corporation
 
 # Side Projects
 - Built active directory homelab for testing attacks and how to defend agaisnt them
-- Volunteer at Wild West Hacking Fest Deadwood
-- Released open source tool XYZ on github - [Link to tool]()
+- Administer and automate infrastructure deployments for this site, various services I host, and configuring offensive VM's
 
-# Certifications & Accomplishment
+# Certifications & Accomplishments
 - CompTIA Security+
-- Tryhackme top 1% - [Link to Tryhackme profile]()
-- XYZ ctf 3rd place winner - [Link to CTF]()
-- Cybersecurity club memeber
+- AWS Certified Cloud Practitioner, SysOps Administrator, and Security Specialty
+- [TryHackMe Top 3%](https://tryhackme.com/p/gabad00)
+- [HackTheBox](https://app.hackthebox.com/profile/1122567)
+- PNPT in progress

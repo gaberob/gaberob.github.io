@@ -8,16 +8,8 @@ draft: false
 
 # Social Media Links
 
-**Email** -> your(at)email@provider.com
+[Linkedin](https://www.linkedin.com/in/gabrielrob) ->  I check my DM's everyone once and a while.
 
-[Mastodon]() -> This is where the cool infosec people hang out. :)
+[Github](https://github.com/gaberob) -> Sometimes I post things that I'm working on.
 
-[Twitter]() ->  I check my DM's fairly often.
-
-[Linkedin]() ->  I check my DM's everyone once and a while.
-
-[Youtube]() -> Sometimes I post things that I'm working on.
-
-[Blog]() -> Research and long form content.
-
-[Roundup]() -> Weekly "What have I been working on" geared toward helping people see what they can do to get experience without paying for certs/degrees.
+[Blog](https://contactroberts.com) -> Long form content and what I have been working on.

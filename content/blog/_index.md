@@ -1,8 +1,8 @@
 ---
-title: "Homepage Title"
+title: "Blogs"
 date: 2022-10-08
 draft: false 
-description: "Graham Helton"
+description: "Gabe Roberts"
 ---
 
 

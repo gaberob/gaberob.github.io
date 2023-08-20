@@ -1,8 +1,8 @@
 ---
-title: "Homepage Title"
+title: "Other Stuff"
 date: 2022-10-08
 draft: false 
-description: "Graham Helton"
+description: "Gabe Roberts"
 ---
 
 

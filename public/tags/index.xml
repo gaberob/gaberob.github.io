@@ -1,44 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Graham Helton</title>
-    <link>https://grahamhelton.com/tags/</link>
-    <description>Recent content in Tags on Graham Helton</description>
+    <title>Tags on Gabe Roberts Blog</title>
+    <link>https://contactroberts.com/tags/</link>
+    <description>Recent content in Tags on Gabe Roberts Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 19 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://grahamhelton.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Mon, 17 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://contactroberts.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Roundup</title>
-      <link>https://grahamhelton.com/tags/roundup/</link>
-      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
+      <title>Automation</title>
+      <link>https://contactroberts.com/tags/automation/</link>
+      <pubDate>Mon, 17 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://grahamhelton.com/tags/roundup/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Security</title>
-      <link>https://grahamhelton.com/tags/security/</link>
-      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://grahamhelton.com/tags/security/</guid>
+      <guid>https://contactroberts.com/tags/automation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Homelab</title>
-      <link>https://grahamhelton.com/tags/homelab/</link>
-      <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
+      <link>https://contactroberts.com/tags/homelab/</link>
+      <pubDate>Mon, 17 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://grahamhelton.com/tags/homelab/</guid>
+      <guid>https://contactroberts.com/tags/homelab/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Research</title>
-      <link>https://grahamhelton.com/tags/research/</link>
-      <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
+      <title>Security</title>
+      <link>https://contactroberts.com/tags/security/</link>
+      <pubDate>Mon, 17 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://grahamhelton.com/tags/research/</guid>
+      <guid>https://contactroberts.com/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CTF</title>
+      <link>https://contactroberts.com/tags/ctf/</link>
+      <pubDate>Tue, 11 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://contactroberts.com/tags/ctf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AD</title>
+      <link>https://contactroberts.com/tags/ad/</link>
+      <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://contactroberts.com/tags/ad/</guid>
       <description></description>
     </item>
     

@@ -2,42 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://grahamhelton.com/pages/links/</loc>
-    <lastmod>2022-11-06T00:00:00+00:00</lastmod>
+    <loc>https://contactroberts.com/pages/links/</loc>
+    <lastmod>2023-08-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://grahamhelton.com/</loc>
+    <loc>https://contactroberts.com/blog/07-17-2023_automating_kali_with_ansible/</loc>
+    <lastmod>2023-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://contactroberts.com/tags/automation/</loc>
+    <lastmod>2023-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://contactroberts.com/tags/homelab/</loc>
+    <lastmod>2023-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://contactroberts.com/tags/security/</loc>
+    <lastmod>2023-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://contactroberts.com/tags/</loc>
+    <lastmod>2023-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://contactroberts.com/tags/ctf/</loc>
+    <lastmod>2023-07-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://contactroberts.com/blog/07-11-2023_htb_montverde/</loc>
+    <lastmod>2023-07-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://contactroberts.com/tags/ad/</loc>
+    <lastmod>2023-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://contactroberts.com/blog/07-10-2023_thm_attacktive_directory/</loc>
+    <lastmod>2023-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://contactroberts.com/blog/07-08-thm-wreath/</loc>
+    <lastmod>2023-07-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://contactroberts.com/blog/07-06-2023_htb_buff/</loc>
+    <lastmod>2023-07-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://contactroberts.com/</loc>
     <lastmod>2022-10-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://grahamhelton.com/blog/</loc>
+    <loc>https://contactroberts.com/blog/</loc>
     <lastmod>2022-10-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://grahamhelton.com/pages/</loc>
+    <loc>https://contactroberts.com/pages/</loc>
     <lastmod>2022-10-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://grahamhelton.com/roundup/</loc>
-    <lastmod>2022-10-08T00:00:00+00:00</lastmod>
+    <loc>https://contactroberts.com/blog/07-02-2023_htb_querier/</loc>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://grahamhelton.com/tags/roundup/</loc>
-    <lastmod>2021-12-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://grahamhelton.com/tags/security/</loc>
-    <lastmod>2021-12-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://grahamhelton.com/tags/</loc>
-    <lastmod>2021-12-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://grahamhelton.com/roundup/roundup1/</loc>
-    <lastmod>2021-12-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://grahamhelton.com/blog/sampleblog/</loc>
-    <lastmod>2021-12-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://grahamhelton.com/tags/homelab/</loc>
-    <lastmod>2021-12-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://grahamhelton.com/tags/research/</loc>
-    <lastmod>2021-12-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://grahamhelton.com/categories/</loc>
+    <loc>https://contactroberts.com/categories/</loc>
   </url>
 </urlset>

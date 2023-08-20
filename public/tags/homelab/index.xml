@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Homelab on Graham Helton</title>
-    <link>https://grahamhelton.com/tags/homelab/</link>
-    <description>Recent content in Homelab on Graham Helton</description>
+    <title>Homelab on Gabe Roberts Blog</title>
+    <link>https://contactroberts.com/tags/homelab/</link>
+    <description>Recent content in Homelab on Gabe Roberts Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 06 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://grahamhelton.com/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Mon, 17 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://contactroberts.com/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Blog title: researching the XYZ</title>
-      <link>https://grahamhelton.com/blog/sampleblog/</link>
-      <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
+      <title>Automating Kali Configuration With Ansible</title>
+      <link>https://contactroberts.com/blog/07-17-2023_automating_kali_with_ansible/</link>
+      <pubDate>Mon, 17 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://grahamhelton.com/blog/sampleblog/</guid>
-      <description>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu sem viverra, blandit justo in, ullamcorper nisl. Aliquam maximus lorem et molestie pretium. In luctus facilisis eros id finibus. Nam ac lectus lacus. Nullam quis egestas risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce id elit gravida sem gravida sollicitudin. Sed congue nulla elit, id cursus nibh viverra vitae.
-Title In vel sapien a justo condimentum finibus.</description>
+      <guid>https://contactroberts.com/blog/07-17-2023_automating_kali_with_ansible/</guid>
+      <description>Automating the configuration of new Kali VM&amp;rsquo;s As I frequently use virtual machines, specifically Kali Linux, for various capture the flags and courses, it is always a hassle to reinstall on a new computer, or if something breaks. I have had a bit of experience with ansible in the past, and have talked with people who have made their own scripts to automate configuring new installations but never got around to doing it myself.</description>
     </item>
     
   </channel>

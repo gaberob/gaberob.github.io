@@ -1,7 +1,7 @@
 ---
 title: "Social Links"
 images: ["/libraryCard.png"]
-date: 2022-11-06
+date: 2023-08-19
 description: "A collection of links to my social media accounts and pages"
 draft: false 
 ---

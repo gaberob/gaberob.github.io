@@ -1,0 +1,105 @@
+<!DOCTYPE html>  
+<html lang="en"><link rel="stylesheet" href="../../css/style.css" type="text/css" media="all" />  
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Automating Kali Configuration With Ansible &middot; Gabe Roberts Blog">
+<meta property="og:description" content="Automating the configuration of new Kali VM&amp;amp;rsquo;s As I frequently use virtual machines, specifically Kali Linux, for various capture the flags and courses, it is always a hassle to reinstall on a new computer, or if something breaks. I have had a bit of experience with ansible in the past, and have talked with people who have made their own scripts to automate configuring new installations but never got around to doing it myself.">
+<meta property="og:url" content="https://contactroberts.com/blog/07-17-2023_automating_kali_with_ansible/">
+<meta property="og:site_name" content="Gabe Roberts Blog">
+<meta property="og:image" content="">
+<meta property="og:image:secure_url" content="">
+
+
+
+<meta property="article:published_time" content="2023-07-17T00:00:00Z">
+
+<body><header>  
+    <nav class="navbar" role="navigation">  
+        <div class="navbar__left">  
+            <a href="../../">Gabe Roberts</a>  
+        </div>  
+        <div class="">  
+            <a href="../../blog">Blogs</a>  
+            <span class ="nav-item navbar-text mx-1">&emsp;/&emsp;</span>
+            <a href="../../tags/">Tags</a>  
+            <span class ="nav-item navbar-text mx-1">&emsp;/&emsp;</span>
+            <a href="../../pages/">Other</a>  
+        </div>  
+    </nav>  
+</header>  
+<main>  
+<section class="section">  
+  <article>  
+    <div class="blog__container">  
+          <h1 class="blog__title">Automating Kali Configuration With Ansible</h1>  
+
+          <p> How I started automating configuration of new kali deployments. </p>
+          <p>Published: July 17, 2023</p>
+          <p>Reading Time: 3  minutes <p>
+
+            <div class="blog__details">  
+              <div class="blog__info">  
+              </div>  
+            </div>  
+          <div class="content">  
+            <h1 id="automating-the-configuration-of-new-kali-vms">Automating the configuration of new Kali VM&rsquo;s</h1>
+<p>As I frequently use virtual machines, specifically Kali Linux, for various capture the flags and courses, it is always a hassle to reinstall on a new computer, or if something breaks. I have had a bit of experience with <code>ansible</code> in the past, and have talked with people who have made their own scripts to automate configuring new installations but never got around to doing it myself.</p>
+<p>Security youtuber Ippsec released <a href="https://www.youtube.com/playlist?list=PLidcsTyj9JXJVIFqyHBHzrRYKPpZYFjM8">this</a>, series of videos in which he automated the configuration of a fresh install of his Parrot VM. I decided that this would be a great opportunity to fork the repository and configure it to my needs. Ippsec&rsquo;s videos are a much better source of truth for what is going on here than I am. This is just a high-level summary and some use-cases, as well as my changes.</p>
+<h2 id="what-the-playbook-does">What the playbook does</h2>
+<p>The ansible playbook leverages 4 main roles:</p>
+<ul>
+<li>configure-logging</li>
+<li>configure-tmux</li>
+<li>configure-browser</li>
+<li>customize-terminal</li>
+<li>install-tools</li>
+</ul>
+<p>The idea is to have to do as little manual work as possible and have the tools and settings I need to be successful.</p>
+<h3 id="configure-logging">configure-logging</h3>
+<p>This role is one that I left largely unchanged. It turns on logging to detect incoming connections, via UFW.  This will add logs that we can query via rsylog.</p>
+<p>The logs for incoming connections are prefixed via <code>[UFW-SYN-LOG]</code> and can be queried via <code>sudo cat rsyslog | grep -i UFW-SYN-LOG</code>.</p>
+<p>It also configures <code>auditd</code> rules, based on <a href="https://github.com/gaberob/kali-ansible/blob/master/roles/configure-logging/files/audit.rules">these</a>. We can look through <code>audit.log</code> for these. We can use <code>aureport</code> and <code>ausearch</code> to search through these. <code>ausearch -sv no</code>.</p>
+<p>Laurel, is a plugin that gives us the ability to more easily search through these logs.</p>
+<p>Logs are output in <code>/var/log/laurel</code> in <code>audit.log</code> in json. We can use something like <code>gron</code> and <code>jq</code> to parse through them now.</p>
+<p>Find events that were denied:</p>
+<p><code>cat /var/log/laurel/audit.log | grep 'success&quot;:&quot;no' | jq . | less </code></p>
+<p>Find other events ran by that same parent process:</p>
+<p><code>cat /var/log/laurel/audit.log | grep 'ppid&quot;:&lt;ppid&gt;' | jq . | less</code></p>
+<p><code>ausearch -pp &lt;ppid&gt;</code></p>
+<p>Other examples:</p>
+<p><code>ps -ef | grep python</code></p>
+<p><code>ausearch -p &lt;pid&gt;</code></p>
+<h3 id="configure-tmux">configure-tmux</h3>
+<p>This task is pretty self explanatory. It installs tmux and copies <code>.tmux.conf</code> to the user&rsquo;s home folder.</p>
+<h3 id="customize-browser">customize-browser</h3>
+<p>This task configures Firefox to proxy https traffic via burpsuite and installs some useful extensions like FoxyProxy, DarkReader, and Wappalyzer.</p>
+<h3 id="customize-terminal">customize-terminal</h3>
+<p>This copies my zsh config into the user&rsquo;s home folder, my .vimrc into the users home folder, and uses dconf to import gnome-shell keybindings.</p>
+<p>The <code>gnome-shell</code> task that is included in the main task here can be commented out if not using a gnome install, this is just what I prefer.</p>
+<h3 id="install-tools">install-tools</h3>
+<p>This installs a pretty robust set of missing tools from apt, cargo, gem, go, pipx, and github.</p>
+<p>My additions here are breaking out a task specifically for go packages and adding a task for cargo packes for stuff written in rust.</p>
+<p>These tasks are designed where each package delivery system are separated out and can be modified as needed. Suppose a new binary from github, or even a whole repository becomes a standard part of your workflow, it just needs to be added.</p>
+<p>You can use my playbook <a href="https://github.com/gaberob/kali-ansible">here</a>, like I said earlier, my desktop enviroment of choice is gnome so it has some gnome specific tasks that can easily be removed. Add or remove tools specific to your needs and you should be good to go!</p>
+  
+          </div>  
+        </div>  
+
+  </article>  
+
+
+  
+        </main>
+
+<footer>
+  <div class="footer_class">
+    <p>
+    <a href="../../pages/links" title="Reach out to me">Have Questions? Reach out to me.</a>
+    </p>
+
+  </div>
+</footer>
+</body>  
+</html>
+

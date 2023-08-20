@@ -1,43 +1,83 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Homepage Title on Graham Helton</title>
-    <link>https://grahamhelton.com/</link>
-    <description>Recent content in Homepage Title on Graham Helton</description>
+    <title>About Me on Gabe Roberts Blog</title>
+    <link>https://contactroberts.com/</link>
+    <description>Recent content in About Me on Gabe Roberts Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 08 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://grahamhelton.com/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sat, 08 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://contactroberts.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Social Links</title>
-      <link>https://grahamhelton.com/pages/links/</link>
-      <pubDate>Sun, 06 Nov 2022 00:00:00 +0000</pubDate>
+      <link>https://contactroberts.com/pages/links/</link>
+      <pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://grahamhelton.com/pages/links/</guid>
-      <description>Social Media Links Email -&amp;gt; your(at)email@provider.com
-Mastodon -&amp;gt; This is where the cool infosec people hang out. :)
-Twitter -&amp;gt; I check my DM&amp;rsquo;s fairly often.
-Linkedin -&amp;gt; I check my DM&amp;rsquo;s everyone once and a while.
-Youtube -&amp;gt; Sometimes I post things that I&amp;rsquo;m working on.
-Blog -&amp;gt; Research and long form content.
-Roundup -&amp;gt; Weekly &amp;ldquo;What have I been working on&amp;rdquo; geared toward helping people see what they can do to get experience without paying for certs/degrees.</description>
+      <guid>https://contactroberts.com/pages/links/</guid>
+      <description>Social Media Links Linkedin -&amp;gt; I check my DM&amp;rsquo;s everyone once and a while.
+Github -&amp;gt; Sometimes I post things that I&amp;rsquo;m working on.
+Blog -&amp;gt; Long form content and what I have been working on.</description>
     </item>
     
     <item>
-      <title>Weekly Roundup #1: December 12-19th 2021</title>
-      <link>https://grahamhelton.com/roundup/roundup1/</link>
-      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
+      <title>Automating Kali Configuration With Ansible</title>
+      <link>https://contactroberts.com/blog/07-17-2023_automating_kali_with_ansible/</link>
+      <pubDate>Mon, 17 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://grahamhelton.com/roundup/roundup1/</guid>
-      <description>What is this? This is the first of a weekly &amp;ldquo;round up&amp;rdquo; that aims to summarize the security or IT related concepts I have worked on this week during my free time. My goal is to create a footprint for others to follow in if they so desire. When I was first learning the basics of security I struggled to find projects that I could work on to help me learn useful security practices and techniques.</description>
+      <guid>https://contactroberts.com/blog/07-17-2023_automating_kali_with_ansible/</guid>
+      <description>Automating the configuration of new Kali VM&amp;rsquo;s As I frequently use virtual machines, specifically Kali Linux, for various capture the flags and courses, it is always a hassle to reinstall on a new computer, or if something breaks. I have had a bit of experience with ansible in the past, and have talked with people who have made their own scripts to automate configuring new installations but never got around to doing it myself.</description>
     </item>
     
     <item>
-      <title>Blog title: researching the XYZ</title>
-      <link>https://grahamhelton.com/blog/sampleblog/</link>
-      <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
+      <title>HTB Montverde Writeup</title>
+      <link>https://contactroberts.com/blog/07-11-2023_htb_montverde/</link>
+      <pubDate>Tue, 11 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://grahamhelton.com/blog/sampleblog/</guid>
-      <description>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu sem viverra, blandit justo in, ullamcorper nisl. Aliquam maximus lorem et molestie pretium. In luctus facilisis eros id finibus. Nam ac lectus lacus. Nullam quis egestas risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce id elit gravida sem gravida sollicitudin. Sed congue nulla elit, id cursus nibh viverra vitae.
-Title In vel sapien a justo condimentum finibus.</description>
+      <guid>https://contactroberts.com/blog/07-11-2023_htb_montverde/</guid>
+      <description>HTB &amp;ldquo;Montverde&amp;rdquo; Writeup Montverde is a medium rank Active Directory Box on HTB that had some interesting twists on the privesc, but classic AD on the initial access.
+Enumeration We can start out with an nmap scan.
+1[~/htb/montverde]$ cat montverde.nmap 2# Nmap 7.94 scan initiated Tue Jul 11 18:35:51 2023 as: nmap -sC -sV -oA montverde -v -Pn 10.10.10.172 3Nmap scan report for 10.10.10.172 4Host is up (0.033s latency). 5Not shown: 989 filtered tcp ports (no-response) 6PORT STATE SERVICE VERSION 753/tcp open domain Simple DNS Plus 888/tcp open kerberos-sec Microsoft Windows Kerberos (server time: 2023-07-11 22:36:05Z) 9135/tcp open msrpc Microsoft Windows RPC 10139/tcp open netbios-ssn Microsoft Windows netbios-ssn 11389/tcp open ldap Microsoft Windows Active Directory LDAP (Domain: MEGABANK.</description>
+    </item>
+    
+    <item>
+      <title>THM Attactive Directory Writeup</title>
+      <link>https://contactroberts.com/blog/07-10-2023_thm_attacktive_directory/</link>
+      <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://contactroberts.com/blog/07-10-2023_thm_attacktive_directory/</guid>
+      <description>THM &amp;ldquo;Attacktive Directory&amp;rdquo; Writeup This is a room in TryHackMe dedicated to performing attacks on active directory and kerberos.
+Enumeration To begin we will begin with our standard all ports, scripts, and services nmap scan. I will also run some stuff like enum4linux since I know this is an AD box.
+1Nmap scan report for 10.10.157.30 2Host is up (0.22s latency). 3Not shown: 65509 closed tcp ports (conn-refused) 4PORT STATE SERVICE VERSION 553/tcp open domain Simple DNS Plus 680/tcp open http Microsoft IIS httpd 10.</description>
+    </item>
+    
+    <item>
+      <title>THM Wreath Writeup</title>
+      <link>https://contactroberts.com/blog/07-08-thm-wreath/</link>
+      <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://contactroberts.com/blog/07-08-thm-wreath/</guid>
+      <description>THM &amp;ldquo;Wreath&amp;rdquo; Write Up Wreath was a multi-machine network comprised of windows and linux machines focused on the concept of pivoting. There was a lot of other great tidbits in there as well like basic obsfucation and AV bypass, as well as compiling your own tools. Overall, I learned a lot here!
+Initial Enumeration We have an initial IP to go off of so lets go ahead and throw nmap at it.</description>
+    </item>
+    
+    <item>
+      <title>HTB Buff Writeup</title>
+      <link>https://contactroberts.com/blog/07-06-2023_htb_buff/</link>
+      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://contactroberts.com/blog/07-06-2023_htb_buff/</guid>
+      <description>HTB &amp;ldquo;Buff&amp;rdquo; Writeup &amp;ldquo;Buff&amp;rdquo; is an easy windows box that has been retired. It had a nice exploit from some outdated software for the initial access and required some port forwarding trickery for the privesc.
+Enumeration We can start with nmap.
+1[~/htb/buff]$ nmap -p- -Pn 10.10.10.198 2Starting Nmap 7.94 ( https://nmap.org ) at 2023-07-06 19:36 EDT 3Nmap scan report for 10.10.10.198 4Host is up (0.033s latency). 5Not shown: 65533 filtered tcp ports (no-response) 6PORT STATE SERVICE 77680/tcp open pando-pub 88080/tcp open http-proxy 7680 is not a port that I recognize here.</description>
+    </item>
+    
+    <item>
+      <title>HTB Querier Writeup</title>
+      <link>https://contactroberts.com/blog/07-02-2023_htb_querier/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://contactroberts.com/blog/07-02-2023_htb_querier/</guid>
+      <description>HTB Querier Writeup Enumeration First I did my initial nmap scans and scans with scripts and service detection.
+1[~/htb/bastion]$ nmap -p- 10.10.10.125 2Starting Nmap 7.94 ( https://nmap.org ) at 2023-07-01 15:30 EDT 3Nmap scan report for 10.10.10.125 4Host is up (0.028s latency). 5Not shown: 65521 closed tcp ports (conn-refused) 6PORT STATE SERVICE 7135/tcp open msrpc 8139/tcp open netbios-ssn 9445/tcp open microsoft-ds 101433/tcp open ms-sql-s 115985/tcp open wsman 1247001/tcp open winrm 1349664/tcp open unknown 1449665/tcp open unknown 1549666/tcp open unknown 1649667/tcp open unknown 1749668/tcp open unknown 1849669/tcp open unknown 1949670/tcp open unknown 2049671/tcp open unknown 1[~/htb/bastion]$ nmap -sV -sC -p 135,139,445,1433,5985,47001,49664,49665,49666,49667,49668,49669,49670,49 2671 -oA bastion 10.</description>
     </item>
     
   </channel>

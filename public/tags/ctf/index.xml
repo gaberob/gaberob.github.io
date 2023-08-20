@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CTF on Gabe Roberts Blog</title>
+    <link>https://contactroberts.com/tags/ctf/</link>
+    <description>Recent content in CTF on Gabe Roberts Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://contactroberts.com/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTB Montverde Writeup</title>
+      <link>https://contactroberts.com/blog/07-11-2023_htb_montverde/</link>
+      <pubDate>Tue, 11 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://contactroberts.com/blog/07-11-2023_htb_montverde/</guid>
+      <description>HTB &amp;ldquo;Montverde&amp;rdquo; Writeup Montverde is a medium rank Active Directory Box on HTB that had some interesting twists on the privesc, but classic AD on the initial access.
+Enumeration We can start out with an nmap scan.
+1[~/htb/montverde]$ cat montverde.nmap 2# Nmap 7.94 scan initiated Tue Jul 11 18:35:51 2023 as: nmap -sC -sV -oA montverde -v -Pn 10.10.10.172 3Nmap scan report for 10.10.10.172 4Host is up (0.033s latency). 5Not shown: 989 filtered tcp ports (no-response) 6PORT STATE SERVICE VERSION 753/tcp open domain Simple DNS Plus 888/tcp open kerberos-sec Microsoft Windows Kerberos (server time: 2023-07-11 22:36:05Z) 9135/tcp open msrpc Microsoft Windows RPC 10139/tcp open netbios-ssn Microsoft Windows netbios-ssn 11389/tcp open ldap Microsoft Windows Active Directory LDAP (Domain: MEGABANK.</description>
+    </item>
+    
+    <item>
+      <title>THM Wreath Writeup</title>
+      <link>https://contactroberts.com/blog/07-08-thm-wreath/</link>
+      <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://contactroberts.com/blog/07-08-thm-wreath/</guid>
+      <description>THM &amp;ldquo;Wreath&amp;rdquo; Write Up Wreath was a multi-machine network comprised of windows and linux machines focused on the concept of pivoting. There was a lot of other great tidbits in there as well like basic obsfucation and AV bypass, as well as compiling your own tools. Overall, I learned a lot here!
+Initial Enumeration We have an initial IP to go off of so lets go ahead and throw nmap at it.</description>
+    </item>
+    
+    <item>
+      <title>HTB Buff Writeup</title>
+      <link>https://contactroberts.com/blog/07-06-2023_htb_buff/</link>
+      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://contactroberts.com/blog/07-06-2023_htb_buff/</guid>
+      <description>HTB &amp;ldquo;Buff&amp;rdquo; Writeup &amp;ldquo;Buff&amp;rdquo; is an easy windows box that has been retired. It had a nice exploit from some outdated software for the initial access and required some port forwarding trickery for the privesc.
+Enumeration We can start with nmap.
+1[~/htb/buff]$ nmap -p- -Pn 10.10.10.198 2Starting Nmap 7.94 ( https://nmap.org ) at 2023-07-06 19:36 EDT 3Nmap scan report for 10.10.10.198 4Host is up (0.033s latency). 5Not shown: 65533 filtered tcp ports (no-response) 6PORT STATE SERVICE 77680/tcp open pando-pub 88080/tcp open http-proxy 7680 is not a port that I recognize here.</description>
+    </item>
+    
+    <item>
+      <title>HTB Querier Writeup</title>
+      <link>https://contactroberts.com/blog/07-02-2023_htb_querier/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://contactroberts.com/blog/07-02-2023_htb_querier/</guid>
+      <description>HTB Querier Writeup Enumeration First I did my initial nmap scans and scans with scripts and service detection.
+1[~/htb/bastion]$ nmap -p- 10.10.10.125 2Starting Nmap 7.94 ( https://nmap.org ) at 2023-07-01 15:30 EDT 3Nmap scan report for 10.10.10.125 4Host is up (0.028s latency). 5Not shown: 65521 closed tcp ports (conn-refused) 6PORT STATE SERVICE 7135/tcp open msrpc 8139/tcp open netbios-ssn 9445/tcp open microsoft-ds 101433/tcp open ms-sql-s 115985/tcp open wsman 1247001/tcp open winrm 1349664/tcp open unknown 1449665/tcp open unknown 1549666/tcp open unknown 1649667/tcp open unknown 1749668/tcp open unknown 1849669/tcp open unknown 1949670/tcp open unknown 2049671/tcp open unknown 1[~/htb/bastion]$ nmap -sV -sC -p 135,139,445,1433,5985,47001,49664,49665,49666,49667,49668,49669,49670,49 2671 -oA bastion 10.</description>
+    </item>
+    
+  </channel>
+</rss>

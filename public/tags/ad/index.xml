@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AD on Gabe Roberts Blog</title>
+    <link>https://contactroberts.com/tags/ad/</link>
+    <description>Recent content in AD on Gabe Roberts Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 10 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://contactroberts.com/tags/ad/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>THM Attactive Directory Writeup</title>
+      <link>https://contactroberts.com/blog/07-10-2023_thm_attacktive_directory/</link>
+      <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://contactroberts.com/blog/07-10-2023_thm_attacktive_directory/</guid>
+      <description>THM &amp;ldquo;Attacktive Directory&amp;rdquo; Writeup This is a room in TryHackMe dedicated to performing attacks on active directory and kerberos.
+Enumeration To begin we will begin with our standard all ports, scripts, and services nmap scan. I will also run some stuff like enum4linux since I know this is an AD box.
+1Nmap scan report for 10.10.157.30 2Host is up (0.22s latency). 3Not shown: 65509 closed tcp ports (conn-refused) 4PORT STATE SERVICE VERSION 553/tcp open domain Simple DNS Plus 680/tcp open http Microsoft IIS httpd 10.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -16,10 +16,10 @@ description: "Gabe Roberts"
 - Phishing and Social Engineering Analyst @ V.F. Corp
 - Phishing and Social Engineering Intern @ V.F. Corp
 - Computer Science T.A.
-- Infosec Intern @ V.F. Corporation
+- Infosec Intern @ V.F. Corp
 
 # Side Projects
-- Built active directory homelab for testing attacks and how to defend agaisnt them
+- Built active directory homelab for testing attacks and how to defend against them
 - Administer and automate infrastructure deployments for this site, various services I host, and configuring offensive VM's
 
 # Certifications & Accomplishments

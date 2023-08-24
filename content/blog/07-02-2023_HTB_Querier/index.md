@@ -1,6 +1,6 @@
 ---
 title: "HTB Querier Writeup"
-date: 2022-07-01
+date: 2023-07-02
 tags: ["CTF","Security"]
 description: "My first time exploiting MSSQL."
 draft: false

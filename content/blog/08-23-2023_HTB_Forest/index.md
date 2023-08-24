@@ -1,3 +1,12 @@
+--
+title: "HTB Forest Writeup"
+date: 2023-08-23
+tags: ["CTF","Security"]
+description: "Let's all love bloodhound"
+draft: false
+type: page
+---
+
 
 This was an Active Directory box that required some solid enumeration for the foothold and we got to have some fun in Bloodhound to get over the finish.
 

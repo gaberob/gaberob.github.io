@@ -8,7 +8,7 @@ description: "Gabe Roberts"
 
 
 # Education
-- Bachelors in Information Technology and Supply Chain Managment, Concentration in Cybersecurity
+- Bachelors in Information Technology and Supply Chain Management, Concentration in Cybersecurity
 
 
 # Job Experience

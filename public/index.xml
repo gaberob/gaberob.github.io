@@ -8,6 +8,17 @@
     <language>en</language>
     <lastBuildDate>Sat, 08 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://contactroberts.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>HTB Forest Writeup</title>
+      <link>https://contactroberts.com/blog/08-23-2023_htb_forest/</link>
+      <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://contactroberts.com/blog/08-23-2023_htb_forest/</guid>
+      <description>This was an Active Directory box that required some solid enumeration for the foothold and we got to have some fun in Bloodhound to get over the finish.
+Enumeration I started out my enumeration as is typical with nmap.
+1# Nmap 7.94 scan initiated Tue Aug 22 18:10:12 2023 as: nmap -sC -sV -oA forest_port 10.10.10.161 2Nmap scan report for 10.10.10.161 3Host is up (0.029s latency). 4Not shown: 989 closed tcp ports (conn-refused) 5PORT STATE SERVICE VERSION 653/tcp open domain Simple DNS Plus 788/tcp open kerberos-sec Microsoft Windows Kerberos (server time: 2023-08-22 22:17:07Z) 8135/tcp open msrpc Microsoft Windows RPC 9139/tcp open netbios-ssn Microsoft Windows netbios-ssn 10389/tcp open ldap Microsoft Windows Active Directory LDAP (Domain: htb.</description>
+    </item>
+    
+    <item>
       <title>Social Links</title>
       <link>https://contactroberts.com/pages/links/</link>
       <pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate>
@@ -73,22 +84,11 @@ Enumeration We can start with nmap.
     <item>
       <title>HTB Querier Writeup</title>
       <link>https://contactroberts.com/blog/07-02-2023_htb_querier/</link>
-      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://contactroberts.com/blog/07-02-2023_htb_querier/</guid>
       <description>HTB Querier Writeup Enumeration First I did my initial nmap scans and scans with scripts and service detection.
 1[~/htb/bastion]$ nmap -p- 10.10.10.125 2Starting Nmap 7.94 ( https://nmap.org ) at 2023-07-01 15:30 EDT 3Nmap scan report for 10.10.10.125 4Host is up (0.028s latency). 5Not shown: 65521 closed tcp ports (conn-refused) 6PORT STATE SERVICE 7135/tcp open msrpc 8139/tcp open netbios-ssn 9445/tcp open microsoft-ds 101433/tcp open ms-sql-s 115985/tcp open wsman 1247001/tcp open winrm 1349664/tcp open unknown 1449665/tcp open unknown 1549666/tcp open unknown 1649667/tcp open unknown 1749668/tcp open unknown 1849669/tcp open unknown 1949670/tcp open unknown 2049671/tcp open unknown 1[~/htb/bastion]$ nmap -sV -sC -p 135,139,445,1433,5985,47001,49664,49665,49666,49667,49668,49669,49670,49 2671 -oA bastion 10.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://contactroberts.com/blog/08-23-2023_htb_forest/htb-forest-writeup-8-23-2023/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://contactroberts.com/blog/08-23-2023_htb_forest/htb-forest-writeup-8-23-2023/</guid>
-      <description>This was an Active Directory box that required some solid enumeration for the foothold and we got to have some fun in Bloodhound to get over the finish.
-Enumeration I started out my enumeration as is typical with nmap.
-1# Nmap 7.94 scan initiated Tue Aug 22 18:10:12 2023 as: nmap -sC -sV -oA forest_port 10.10.10.161 2Nmap scan report for 10.10.10.161 3Host is up (0.029s latency). 4Not shown: 989 closed tcp ports (conn-refused) 5PORT STATE SERVICE VERSION 653/tcp open domain Simple DNS Plus 788/tcp open kerberos-sec Microsoft Windows Kerberos (server time: 2023-08-22 22:17:07Z) 8135/tcp open msrpc Microsoft Windows RPC 9139/tcp open netbios-ssn Microsoft Windows netbios-ssn 10389/tcp open ldap Microsoft Windows Active Directory LDAP (Domain: htb.</description>
     </item>
     
   </channel>

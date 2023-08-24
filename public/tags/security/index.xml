@@ -6,7 +6,18 @@
     <description>Recent content in Security on Gabe Roberts Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 17 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://contactroberts.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://contactroberts.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTB Forest Writeup</title>
+      <link>https://contactroberts.com/blog/08-23-2023_htb_forest/</link>
+      <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://contactroberts.com/blog/08-23-2023_htb_forest/</guid>
+      <description>This was an Active Directory box that required some solid enumeration for the foothold and we got to have some fun in Bloodhound to get over the finish.
+Enumeration I started out my enumeration as is typical with nmap.
+1# Nmap 7.94 scan initiated Tue Aug 22 18:10:12 2023 as: nmap -sC -sV -oA forest_port 10.10.10.161 2Nmap scan report for 10.10.10.161 3Host is up (0.029s latency). 4Not shown: 989 closed tcp ports (conn-refused) 5PORT STATE SERVICE VERSION 653/tcp open domain Simple DNS Plus 788/tcp open kerberos-sec Microsoft Windows Kerberos (server time: 2023-08-22 22:17:07Z) 8135/tcp open msrpc Microsoft Windows RPC 9139/tcp open netbios-ssn Microsoft Windows netbios-ssn 10389/tcp open ldap Microsoft Windows Active Directory LDAP (Domain: htb.</description>
+    </item>
+    
     <item>
       <title>Automating Kali Configuration With Ansible</title>
       <link>https://contactroberts.com/blog/07-17-2023_automating_kali_with_ansible/</link>
@@ -62,7 +73,7 @@ Enumeration We can start with nmap.
     <item>
       <title>HTB Querier Writeup</title>
       <link>https://contactroberts.com/blog/07-02-2023_htb_querier/</link>
-      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://contactroberts.com/blog/07-02-2023_htb_querier/</guid>
       <description>HTB Querier Writeup Enumeration First I did my initial nmap scans and scans with scripts and service detection.

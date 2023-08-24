@@ -1,5 +1,5 @@
 ---
-title: "THM Attactive Directory Writeup"
+title: "THM Attacktive Directory Writeup"
 date: 2023-07-10
 tags: ["Security","AD"]
 description: "All AD all the time."

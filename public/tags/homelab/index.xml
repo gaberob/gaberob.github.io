@@ -5,7 +5,6 @@
     <link>https://contactroberts.com/tags/homelab/</link>
     <description>Recent content in Homelab on Gabe Roberts Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
     <lastBuildDate>Mon, 17 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://contactroberts.com/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automating Kali Configuration With Ansible</title>

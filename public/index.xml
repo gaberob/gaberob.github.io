@@ -5,8 +5,30 @@
     <link>https://contactroberts.com/</link>
     <description>Recent content in About Me on Gabe Roberts Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
     <lastBuildDate>Sat, 08 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://contactroberts.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Security Book Club</title>
+      <link>https://contactroberts.com/pages/book-club/</link>
+      <pubDate>Mon, 04 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://contactroberts.com/pages/book-club/</guid>
+      <description>This is a space to compile books that I have read that I believe provide great value to my growth as a security professional.
+Red Team: Development and Operations- Joe Vest &amp;amp; James Tubberville Finished - 9/1/2023
+This was as great look into the operations of a professional red team. It challenged my preconceived notions of red teaming/adversary emulation and how it differs from traditional penetration testing engagements.</description>
+    </item>
+    
+    <item>
+      <title>Security Course Catalog</title>
+      <link>https://contactroberts.com/pages/course-catalog/</link>
+      <pubDate>Mon, 04 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://contactroberts.com/pages/course-catalog/</guid>
+      <description>This is a compilation of online courses that I have used to skill myself up.
+A Cloud Guru To get some familiarity with cloud and devops practices, I took a number of courses here to prepare for some AWS exams and general professional development.
+Courses Taken:
+AWS Certified Cloud Practicioner AWS Certified SysOps Deploying to AWS with Terraform and Ansible DevOps Essentials DevSecOps Essentials Ansible Quick Start Jenkins Quick Start Cantrill.</description>
+    </item>
+    
     <item>
       <title>HTB Bounty Writeup</title>
       <link>https://contactroberts.com/blog/08-28-2023_htb_bounty/</link>

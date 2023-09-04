@@ -5,23 +5,40 @@
     <link>https://contactroberts.com/tags/</link>
     <description>Recent content in Tags on Gabe Roberts Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 28 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://contactroberts.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://contactroberts.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>CTF</title>
-      <link>https://contactroberts.com/tags/ctf/</link>
-      <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
+      <title>Learning</title>
+      <link>https://contactroberts.com/tags/learning/</link>
+      <pubDate>Mon, 04 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://contactroberts.com/tags/ctf/</guid>
+      <guid>https://contactroberts.com/tags/learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reading</title>
+      <link>https://contactroberts.com/tags/reading/</link>
+      <pubDate>Mon, 04 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://contactroberts.com/tags/reading/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Security</title>
       <link>https://contactroberts.com/tags/security/</link>
-      <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 04 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://contactroberts.com/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CTF</title>
+      <link>https://contactroberts.com/tags/ctf/</link>
+      <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://contactroberts.com/tags/ctf/</guid>
       <description></description>
     </item>
     

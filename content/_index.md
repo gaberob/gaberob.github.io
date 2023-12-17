@@ -8,7 +8,7 @@ description: "Gabe Roberts"
 
 
 # Education
-- Bachelors in Information Technology and Supply Chain Management, Concentration in Cybersecurity
+- Bachelors in Information Technology and Supply Chain Management, Concentration in Cybersecurity from UNC Greensboro
 
 
 # Job Experience
@@ -18,13 +18,12 @@ description: "Gabe Roberts"
 - Computer Science T.A.
 - Infosec Intern @ V.F. Corp
 
-# Side Projects
-- Built active directory homelab for testing attacks and how to defend against them
-- Administer and automate infrastructure deployments for this site, various services I host, and configuring offensive VM's
-
+# Side Projects and Interests
+- Homelab containing vulnerable Active Directory tenant and various web applications 
+- Writing scripts and Ansible playbooks to automate deployments of virtual machines and my personal computing setups
+- Group CTF and hacking sessions
 # Certifications & Accomplishments
 - CompTIA Security+
 - AWS Certified Cloud Practitioner, SysOps Administrator, and Security Specialty
-- [TryHackMe Top 3%](https://tryhackme.com/p/gabad00)
 - [HackTheBox](https://app.hackthebox.com/profile/1122567)
-- PNPT in progress
+- [Courses that I have taken](/pages/course-catalog)

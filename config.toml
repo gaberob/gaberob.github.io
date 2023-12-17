@@ -1,5 +1,5 @@
 title = "Gabe's Blog"                
-baseURL = "https://contactroberts.com"        
+baseURL = "https://gaberob.github.io"        
 relativeURLs = true
 theme = "smore"
 enableEmoji = true

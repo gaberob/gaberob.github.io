@@ -1,4 +1,4 @@
-title = "Gabe Roberts Blog"                
+title = "Gabe's Blog"                
 baseURL = "https://contactroberts.com"        
 relativeURLs = true
 theme = "smore"
